@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Wrapper background */
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/admin_login_bg.jpg) ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section .main {
+    position: relative;
+    width: 100%;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+/* Login box */
+.login-box {
+    position: absolute;
+    top: 300%;
+    left: 50%;
+    width: 1000px; /* Adjusted width for larger forms */
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(209, 207, 207, 0.987);
+    box-sizing:border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* Form field styles */
+.user-box {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+}
+
+.user-box label {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    left:0;
+    font-size: 12px;
+    color: #000;
+}
+
+/* Form container for columns */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-column {
+    width: 48%;
+}
+
+/* Submit button */
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #000;
+    transition: 0.5s;
+    margin-left:45%;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #f44703;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #f44703, 0 0 25px #f44703, 0 0 50px #f44703, 0 0 100px #f44703;
+}
+
+/* Gender options */
+.gender-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Animations for buttons */
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(1) {
+    bottom: 2px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f44703);
+    animation: btn-anim1 2s linear infinite;
+}
+
